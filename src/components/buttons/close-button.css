@@ -1,0 +1,14 @@
+.close-info {
+    position: absolute;
+    color: hwb(351 7% 18%);
+    font-size: 35px;
+    right: 0;
+    margin: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.close-info:hover {
+    color: rgba(210, 18, 46, 0.7);
+}

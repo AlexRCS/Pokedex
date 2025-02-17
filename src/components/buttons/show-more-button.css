@@ -1,0 +1,15 @@
+.show-more {
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 10px;
+    margin: 20px;
+    cursor: pointer;
+    background-color: #F0F8FF;
+    border: double 5px #FEBE10; 
+    font-weight: bolder;
+    transition: opacity 0.5s;
+}
+
+.show-more:hover {
+    opacity: 0.8;
+}
