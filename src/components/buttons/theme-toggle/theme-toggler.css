@@ -1,0 +1,24 @@
+.fa-solid.fa-sort-down.light {
+    font-size: 16px;
+    transition: transform 0.5s ease;
+}
+
+.fa-solid.fa-sort-down.light {
+    transform: rotate(180deg);
+}
+
+.fa-circle-half-stroke {
+    transition: transform 1s ease;
+}
+
+.fa-circle-half-stroke.dark {
+    transform: rotate(180deg);
+    color: #F7CE68;
+}
+
+.theme-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+
+}

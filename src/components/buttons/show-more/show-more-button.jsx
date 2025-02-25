@@ -1,7 +1,8 @@
 import './show-more-button.css'
-
+import { useThemeContext } from '../../../contexts/themeContext'
 
 function ShowMore({ cardsCounter, setCardsCounter }) {
+    const { theme } = useThemeContext()
 
     const handleShow = ((e) => {
         e.preventDefault()
@@ -12,7 +13,7 @@ function ShowMore({ cardsCounter, setCardsCounter }) {
 
     return (
         <>
-            <button className='show-more' onClick={handleShow}> Show More Pokémons </button>
+            <button className={`show-more ${theme}`} onClick={handleShow}> Show More Pokémons </button>
         </>
     )
 }
