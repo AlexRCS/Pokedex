@@ -2,18 +2,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    max-width: 100dvw;
 }
 
-.title-theme{
+.title-theme {
     display: flex;
     width: 100%;
     justify-content: center;
-    gap:20vw;
+    gap: 20vw;
     margin-bottom: 0px;
 }
 
-.home-container-light{
+.home-container-light {
     background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
     width: 92vw;
     margin: 10px;
@@ -36,4 +36,40 @@ body {
     flex-flow: wrap;
     width: 100%;
     gap: 10px;
+}
+
+
+@media only screen and (max-width:450px) {
+
+    body {
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+
+    .home-container-light,
+    .home-container-dark {
+        display: flex;
+        margin: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100dvw;
+    }
+
+    .title-theme {
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+        max-width: 110dvw;
+    }
+
+    .cards {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        gap: 10%;
+    }
+
 }

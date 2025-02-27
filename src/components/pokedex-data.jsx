@@ -3,9 +3,10 @@ import axios from 'axios';
 
 import Card from './cards/card/card';
 import InfoCard from './cards/info-cards/info-card'
+import TypesPage from '../pages/types';
 
 function PokeData() {
-    
+
     const [infoCard, setInfoCard] = useState(null)
 
     const [pokedexData, setPokedexData] = useState({
@@ -18,25 +19,25 @@ function PokeData() {
     })
 
 
-        useEffect(() => {
-            const fetchData = async () => {
-                const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokedexData.id}`)
-                    .catch((error) => console.error(error));
-                setPokedexData((prevData) => ({
-                    ...prevData,
-                    name: response.data.name,
-                    type: response.data.types.map((t) => t.type.name),
-                    move: response.data.moves.map((m) => m.move.name),
-                    ability: response.data.abilities.map((a) => a.ability.name),
-                    image: response.data.sprites.other['official-artwork'].front_default,
-                }))
-                console.log(response.data)
-            }
-            if (pokedexData.id <= 1025) { fetchData() }
-            else {
-                console.log('pokemon não encontrdo')
-            }
-        }, [pokedexData.id]);
+    useEffect(() => {
+        const fetchData = async () => {
+            const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokedexData.id}`)
+                .catch((error) => console.error(error));
+            setPokedexData((prevData) => ({
+                ...prevData,
+                name: response.data.name,
+                type: response.data.types.map((t) => t.type.name),
+                move: response.data.moves.map((m) => m.move.name),
+                ability: response.data.abilities.map((a) => a.ability.name),
+                image: response.data.sprites.other['official-artwork'].front_default,
+            }))
+            console.log(response.data)
+        }
+        if (pokedexData.id <= 1025) { fetchData() }
+        else {
+            console.log('pokemon não encontrdo')
+        }
+    }, [pokedexData.id]);
 
 
 

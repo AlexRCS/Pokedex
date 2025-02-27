@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useThemeContext } from './contexts/themeContext'
 import styled from 'styled-components'
 import './App.css'
+import { useNavigate } from 'react-router-dom'
 
 import PokeData from './components/pokedex-data'
 import Search from './components/search-form/search-bar/search'
@@ -16,11 +17,18 @@ const App = () => {
 
   const [cardsCounter, setCardsCounter] = useState(10)
 
+  const navigate = useNavigate()
+
+  const handleTitleClick = () => {
+    navigate(`/`)
+    window.location.reload()
+  };
+
   return (
     <>
       <section className={`home-container-${theme}`}>
         <div className='title-theme'>
-          <Title>POKEDEX DevQuest</Title>
+          <Title onClick={handleTitleClick}>POKEDEX DevQuest</Title>
           <ThemeToggler />
           <SelectType />
         </div>
@@ -38,6 +46,7 @@ const App = () => {
 
 const Title = styled.h1`
 font-size: 50px;
+cursor: pointer;
 `
 //Utilizei o Styled-components apenas nesse trecho pois não vi muita funcionalidade dele no restante do codigo e geraria muita poluição!
 

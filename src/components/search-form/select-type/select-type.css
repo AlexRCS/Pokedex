@@ -1,0 +1,20 @@
+.select-type{
+    border: double;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 5px;
+    margin: 20px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+
+.select-type.light {
+    background-color: #F0F8FF;
+    border: double 5px #FEBE10;
+}
+
+.select-type.dark {
+    background-color: #5072A7;
+    border: double 5px #000000;
+}

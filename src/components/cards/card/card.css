@@ -77,3 +77,25 @@
     width: 100%;
     padding: 10px;
 }
+
+
+
+@media only screen and (max-width:430px) {
+
+    .card.light,
+    .card.dark {
+        width: 155px;
+        margin-bottom: 5px;
+    }
+
+    .pokemon-name.light,
+    .pokemon-name.dark {
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .pokemon-type {
+        gap: 10%;
+        font-size: 13px;
+    }
+}
