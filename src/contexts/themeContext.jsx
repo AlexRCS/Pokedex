@@ -4,13 +4,17 @@ import { createContext, useContext, useState, useEffect } from "react"
 export const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState(() => {
+        return localStorage.getItem("theme") || "light"
+    });
 
     const handleToggle = () => {
         setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
     };
 
+
     useEffect(() => {
+        localStorage.setItem("theme", theme); 
         if (theme === 'light') {
             document.body.style.backgroundColor = '#efefef';
             document.body.style.color = '#000000';
@@ -18,6 +22,7 @@ export function ThemeProvider({ children }) {
             document.body.style.backgroundColor = '#0C2340';
             document.body.style.color = '#ffffff';
         }
+
     }, [theme]);
 
     return (
