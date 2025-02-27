@@ -3,7 +3,6 @@ body {
     align-items: center;
     justify-content: center;
     max-width: 100vw;
-    /* overflow-x: hidden; */
 }
 
 img {
@@ -38,10 +37,12 @@ img {
 
 .cards {
     display: flex;
+    justify-content: center;
     flex-flow: wrap;
     width: 100%;
     gap: 10px;
 }
+
 
 
 @media only screen and (max-width:450px) {
