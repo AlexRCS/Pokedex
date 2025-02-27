@@ -53,7 +53,7 @@
 
 .pokemon-name.light {
     background-color: #ffffff;
-    max-width: 100%;
+    width: 100%;
     word-break: break-all;
     font-size: 40px;
 }
@@ -61,7 +61,7 @@
 
 .pokemon-name.dark {
     background-color: #1a1f71;
-    max-width: 100%;
+    width: 100%;
     word-break: break-all;
     font-size: 40px;
 }
