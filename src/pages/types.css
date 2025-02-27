@@ -1,8 +1,24 @@
-h1{
-    font-size: 40px;
+h1 {
+    font-size: 50px;
     display: flex;
-    width: 100%;
+    width: max-content;
     justify-content: center;
-    gap:20vw;
+    align-items: center;
     margin-bottom: 10px;
+}
+
+
+.title-theme {
+    max-width: 100vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width:450px) {
+
+    h1 {
+        max-width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+    }
 }

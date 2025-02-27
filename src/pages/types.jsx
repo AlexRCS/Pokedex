@@ -8,6 +8,7 @@ import InfoCard from "../components/cards/info-cards/info-card";
 import { useNavigate } from "react-router-dom";
 import ThemeToggler from '../components/buttons/theme-toggle/theme-toggler';
 import SelectType from "../components/search-form/select-type/select-type";
+import PokedexLogo from '../assets/PokedexLogo.png'
 
 import './types.css'
 
@@ -35,6 +36,7 @@ function TypesPage() {
                             move: pokeResponse.data.moves.map((m) => m.move.name),
                             ability: pokeResponse.data.abilities.map((a) => a.ability.name),
                             image: pokeResponse.data.sprites.other['official-artwork'].front_default,
+                            gif: pokeResponse.data.sprites.other.showdown.front_default, 
                         };
                     })
                 );
@@ -54,7 +56,7 @@ function TypesPage() {
         <>
             <section className={`home-container-${theme}`}>
                 <div className='title-theme'>
-                    <h1 onClick={handleTitleClick}>Pokémons type: {type.toUpperCase()}</h1>
+                        <h1 onClick={handleTitleClick}> <img src={PokedexLogo} />{type.toUpperCase()}</h1>
                     <ThemeToggler />
                     <SelectType />
                 </div>

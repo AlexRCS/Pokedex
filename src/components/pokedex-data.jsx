@@ -16,6 +16,7 @@ function PokeData() {
         move: [],
         type: [],
         image: '',
+        gif:'',
     })
 
 
@@ -30,6 +31,7 @@ function PokeData() {
                 move: response.data.moves.map((m) => m.move.name),
                 ability: response.data.abilities.map((a) => a.ability.name),
                 image: response.data.sprites.other['official-artwork'].front_default,
+                gif: response.data.sprites.other.showdown.front_default
             }))
             console.log(response.data)
         }

@@ -9,6 +9,7 @@ import Search from './components/search-form/search-bar/search'
 import ShowMore from './components/buttons/show-more/show-more-button'
 import ThemeToggler from './components/buttons/theme-toggle/theme-toggler'
 import SelectType from './components/search-form/select-type/select-type'
+import PokedexLogo from './assets/PokedexLogo.png'
 
 
 const App = () => {
@@ -28,7 +29,7 @@ const App = () => {
     <>
       <section className={`home-container-${theme}`}>
         <div className='title-theme'>
-          <Title onClick={handleTitleClick}>POKEDEX DevQuest</Title>
+          <Title onClick={handleTitleClick}><img src={PokedexLogo}/></Title>
           <ThemeToggler />
           <SelectType />
         </div>
@@ -45,8 +46,8 @@ const App = () => {
 }
 
 const Title = styled.h1`
-font-size: 50px;
 cursor: pointer;
+margin: 0;
 `
 //Utilizei o Styled-components apenas nesse trecho pois não vi muita funcionalidade dele no restante do codigo e geraria muita poluição!
 

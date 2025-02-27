@@ -31,7 +31,7 @@ function InfoCard({ infoCard, setInfoCard }) {
           <section className='info-card' ref={infoCardRef} >
             <CloseButton setInfoCard={setInfoCard} />
             <div className={`info-name-img ${theme}`} >
-              <img className='info-img' src={infoCard.image} alt="pokemon image" />
+              <img className='info-img' src={infoCard.gif ? infoCard.gif : infoCard.image ? infoCard.image : "imagem não disponivel"} alt="pokemon image" />
               <h1 className='info-name'>{infoCard.name}</h1>
               <div className='info-type'>
                 {Array.isArray(infoCard.type) && infoCard.type.map((type, index) => (
